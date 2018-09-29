@@ -1,28 +1,34 @@
 @font-face {
     font-family: barlowSemiBold;
-    src: url('../font/Barlow-SemiBold.ttf')
+    src: url("../font/Barlow-SemiBold.ttf");
 }
 
 @font-face {
     font-family: barlowBold;
-    src: url('../font/Barlow-Bold.ttf')
+    src: url("../font/Barlow-Bold.ttf");
 }
 
 @font-face {
     font-family: barlowRegular;
-    src: url('../font/Barlow-Regular.ttf')
+    src: url("../font/Barlow-Regular.ttf");
 }
 
 @font-face {
     font-family: barlowMedium;
-    src: url('../font/Barlow-Medium.ttf')
+    src: url("../font/Barlow-Medium.ttf");
 }
 
 .logo {
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 13px;
     width: 600px;
-    height: 67px;
-    background: grey;
+    height: 103px;
+    background: white;
+    -webkit-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.15);
+    box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.15);
+    
 }
 
 .emphasis-text {
@@ -80,7 +86,6 @@ body {
     font-size: 16px !important;
 }
 
-
 .list-ripple .ripple-effect {
     top: -17px !important;
     margin-right: -50px;
@@ -95,54 +100,66 @@ body {
     color: #707070;
 }
 
-
 /*
 	VNM Confetti Button
 	Basic styles - edit these classes as you wish
 */
 
 .vnm-confetti-button {
-	position:								relative;
+    position: relative;
 }
 
 .vnm-confetti {
-	position:								absolute;
-	top:										50%;
-	left:										50%;
-	width:									0;
-	height:									0;
-	z-index: 								1000;	/* To ensure it appears _behind_ your button rather than on top */
-	pointer-events:						none;	/* To ensure it doesn't interfere with any other click events */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    z-index: 1000; /* To ensure it appears _behind_ your button rather than on top */
+    pointer-events: none; /* To ensure it doesn't interfere with any other click events */
 }
 
 .vnm-confetti .confetto {
-	position:								absolute;
-	width:									0.250rem;
-	height:									0.250rem;
+    position: absolute;
+    width: 0.250rem;
+    height: 0.250rem;
 }
 
 /* HERE BE DRAGONS */
 
 .vnm-confetti .confetto:not(.only-hover),
 .vnm-confetti-button:hover .vnm-confetti .confetto.only-hover {
-	display:									block;
-	-webkit-animation:					reset 1s ease-out infinite;	/* Note that this duration is overridden by the inline duration set by the plugin */
-	animation:								reset 1s ease-out infinite;
-	-webkit-animation-name:				reset, fade;
-	animation-name:						reset, fade;
+    display: block;
+    -webkit-animation: reset 1s ease-out infinite; /* Note that this duration is overridden by the inline duration set by the plugin */
+    animation: reset 1s ease-out infinite;
+    -webkit-animation-name: reset, fade;
+    animation-name: reset, fade;
 }
 
 .vnm-confetti-button .vnm-confetti .confetto.only-hover {
-	display:									none;
+    display: none;
 }
 
 @-webkit-keyframes reset {
-	0% { transform: translate(0, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
 }
 
 @keyframes reset {
-	0% { transform: translate(0, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
 }
 
-@-webkit-keyframes fade { to { opacity: 0 } }
-@keyframes fade { to { opacity: 0 } }
+@-webkit-keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
