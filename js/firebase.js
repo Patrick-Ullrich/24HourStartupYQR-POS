@@ -41,14 +41,10 @@ const userSeed = [
   },
   {
     id: 5,
-    name: 'New User',
+    name: 'Patrick Ullrich',
     featured: 4
   }
 ]
-
-function seedUsers () {
-  firebase.database().ref('users').set([...userSeed])
-}
 
 const foodSeed = [
   {
@@ -56,7 +52,7 @@ const foodSeed = [
     'name': 'Spinach Dip',
     'price': '9.99',
     'description': 'Break me off a piece of that spi-nach dip.',
-    'discount': 0,
+    'discount': 15,
     'category': ['vegeterian', 'appetizer']
   },
   {
@@ -64,7 +60,7 @@ const foodSeed = [
     'name': 'Chicken Wings',
     'price': '8.99',
     'description': 'Hot ones is a good show.',
-    'discount': 0,
+    'discount': 5,
     'category': ['chicken', 'appetizer']
   },
   {
@@ -80,7 +76,7 @@ const foodSeed = [
     'name': 'Steak & Frites',
     'price': '23.99',
     'description': 'Top sirloin steak paired with cut potatoes.',
-    'discount': 0,
+    'discount': 20,
     'category': ['meat', 'entree']
   },
   {
@@ -88,7 +84,7 @@ const foodSeed = [
     'name': 'Linguine Chicken Ametriciana',
     'price': '18.99',
     'description': 'This is italy.',
-    'discount': 0,
+    'discount': 10,
     'category': ['chicken', 'entree']
   },
   {
@@ -107,14 +103,14 @@ const drinkSeed = [
     'name': 'Burt Reynolds',
     'description': 'Fizzy but fun.',
     'price': '4.99',
-    'discount': 10
+    'discount': 0
   },
   {
     'id': 1,
     'name': 'White Russian',
     'description': 'Fizzy but fun.',
     'price': '3.99',
-    'discount': 0
+    'discount': 10
   },
   {
     'id': 2,
@@ -145,6 +141,10 @@ const drinkSeed = [
     'discount': 0
   }
 ]
+
+function seedUsers () {
+  firebase.database().ref('users').set([...userSeed])
+}
 
 function seedFood () {
   firebase.database().ref('food').set([...foodSeed])
