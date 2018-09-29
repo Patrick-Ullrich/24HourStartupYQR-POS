@@ -45,20 +45,6 @@ function bindNavigation () {
   }
 }
 
-function setDrinks () {
-  
-  const dataTitles = document.getElementsByClassName('data-title')
-  const dataDescriptions = document.getElementsByClassName('data-description')
-  const dataPrice = document.getElementsByClassName('data-price')
-  const dataDiscount = document.getElementsByClassName('data-discount')
-  for (let i = 0; i < dataTitles.length; i++) {
-    dataTitles[i].innerHTML = drinks[i].title
-    dataDescriptions[i].innerHTML = drinks[i].description
-    dataPrice[i].innerHTML = drinks[i].price
-    dataDiscount[i].innerHTML = drinks[i].discount ? `${drinks[i].discount}% off` : ``
-  }
-}
-
 router = new Navigo(null, true, '#!')
 router.on({
   'landing': () => {
@@ -69,7 +55,7 @@ router.on({
   'drinks': () => {
     loadHTML('drinks.html', 'view').then(() => {
       bindNavigation()
-      setDrinks()
+      getDrink()
     })
   },
   'bill': () => {
