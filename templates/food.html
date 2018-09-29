@@ -16,16 +16,48 @@
     <div class="container">
         <div class="my-4"></div>
         <div class="row">
-            <div class="card col-12 drink-card-container ripple">
-                <div class="card-body drink-card-body">
-                    <div class="float-left drink-card-titles">
-                        <h5 class="featured-drink small">Featured Item</h5>
-                        <h4 class="drink-title font-weight-bold featured-title" id="featured-title">Bahama Mamas</h4>
+            <div class="col-12">
+                <div class="card drink-card-container">
+                    <div class="card-body drink-card-body" style="padding-left:15px; padding-right: 15px;" onclick="collapseFeatured(event)">
+                        <div class="float-left drink-card-titles">
+                            <h5 class="featured-drink small">Featured Item</h5>
+                            <h4 class="drink-title font-weight-bold featured-title" id="featured-title">Bahama Mamas</h4>
+                        </div>
+                        <div class="card col-3 float-right drink-price-container text-center">
+                            <div class="drink-price" id="featured-price">6.49</div>
+                            <div class="subtitle data-discount">20% off</div>
+                        </div>
                     </div>
-                    <div class="card col-3 float-right drink-price-container text-center">
-                        <div class="drink-price" id="featured-price">6.49</div>
-                        <div class="subtitle data-discount">20% off</div>
+
+
+                    <div class="collapse" id="featuredCollapse">
+                        <div class="card-body featured-collapse-bottom">
+                            <div class="float-left">
+                                <div id="featured-description"></div>
+                                <h4 class="mt-2 mb-0">Quantity &nbsp;&nbsp;&nbsp; 
+                                    <span onclick="decrementFeatured()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                                        viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve" width="40px" height="19px">
+                                            <path d="M37.059,16H26H16H4.941C2.224,16,0,18.282,0,21s2.224,5,4.941,5H16h10h11.059C39.776,26,42,23.718,42,21  S39.776,16,37.059,16z"
+                                                fill="#707070" />
+                                        </svg>
+                                    </span> 
+                                    <span id="featuredAmount">00</span> 
+                                    <span onclick="incrementFeatured()">
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 491.86 491.86" style="enable-background:new 0 0 491.86 491.86;" xml:space="preserve" width="40px" height="20px">
+                                        <path d="M465.167,211.614H280.245V26.691c0-8.424-11.439-26.69-34.316-26.69s-34.316,18.267-34.316,26.69v184.924H26.69
+                                        			C18.267,211.614,0,223.053,0,245.929s18.267,34.316,26.69,34.316h184.924v184.924c0,8.422,11.438,26.69,34.316,26.69
+                                                    s34.316-18.268,34.316-26.69V280.245H465.17c8.422,0,26.69-11.438,26.69-34.316S473.59,211.614,465.167,211.614z" fill="#707070"/>
+                                        </svg>
+                                    </span></h4>
+                            </div>
+
+                            <div class="float-right"><button id="startConfetti" class="btn btn-outline-success mt-4" onclick="orderFeatured()">ORDER</button></div>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
+                
                 </div>
             </div>
         </div>
