@@ -36,3 +36,14 @@
   margin-top: 60px;
   color: white;
 }
+
+.featured-collapse-bottom {
+    margin-left: -1px;
+    width: 540px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+    margin-bottom: -2px;
+    border-bottom: 1px;
+    border: grey solid 1px;
+}
