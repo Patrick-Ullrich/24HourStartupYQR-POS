@@ -98,6 +98,7 @@ function order (id, type) {
       userId: userId,
       type: 'food'
     })
+    
     setTimeout(() => $('#collapse' + id).collapse('hide'), 500)
   } else {
     const drink = globalDrinks.find(f => {
@@ -124,6 +125,7 @@ function orderFeatured () {
     userId: user.id,
     type: 'food'
   })
+  changeFeatured(user.featured)
   setTimeout(() => $('#featuredCollapse').collapse('hide'), 500)
 }
 
@@ -144,3 +146,14 @@ $(function () {
     hoverOnly: true
   })
 })
+
+
+function changeFeatured(foodId) {
+  if (foodId === 3) {
+    firebase.database().ref("users/5").set({
+      id: 5,
+      name: 'Patrick Ullrich',
+      featured: 4
+    })
+  }
+}

@@ -32,57 +32,7 @@
                 </h3>
             </div>
         </div>
-        <div class="row my-2">
-            <div class="col-6">
-                <h2>
-                    Pilsner
-                </h2>
-            </div>
-            <div class="col-3 text-center">
-                <h2>
-                    2
-                </h2>
-            </div>
-            <div class="col-3 text-right">
-                <h2>
-                    12.12
-                </h2>
-            </div>
-        </div>
-        <div class="row my-2">
-            <div class="col-6">
-                <h2>
-                    Red Wine 6oz
-                </h2>
-            </div>
-            <div class="col-3 text-center">
-                <h2>
-                    1
-                </h2>
-            </div>
-            <div class="col-3 text-right">
-                <h2>
-                    14.28
-                </h2>
-            </div>
-        </div>
-        <div class="row my-2">
-            <div class="col-6">
-                <h2>
-                    Good Spirit Kombucha
-                </h2>
-            </div>
-            <div class="col-3 text-center">
-                <h2>
-                    3
-                </h2>
-            </div>
-            <div class="col-3 text-right">
-                <h2>
-                    17.82
-                </h2>
-            </div>
-        </div>
+        <div id="drinks"></div>
 
         <!-- Food -->
         <div class="row mt-4">
@@ -96,57 +46,7 @@
             <div class="col-3">
             </div>
         </div>
-        <div class="row my-2">
-            <div class="col-6">
-                <h2>
-                    Hamburger and Fries
-                </h2>
-            </div>
-            <div class="col-3 text-center">
-                <h2>
-                    1
-                </h2>
-            </div>
-            <div class="col-3 text-right">
-                <h2>
-                    12.12
-                </h2>
-            </div>
-        </div>
-        <div class="row my-2">
-            <div class="col-6">
-                <h2>
-                    Red Wine 6oz
-                </h2>
-            </div>
-            <div class="col-3 text-center">
-                <h2>
-                    1
-                </h2>
-            </div>
-            <div class="col-3 text-right">
-                <h2>
-                    14.28
-                </h2>
-            </div>
-        </div>
-        <div class="row my-2">
-            <div class="col-6">
-                <h2>
-                    Good Spirit Kombucha
-                </h2>
-            </div>
-            <div class="col-3 text-center">
-                <h2>
-                    3
-                </h2>
-            </div>
-            <div class="col-3 text-right">
-                <h2>
-                    17.82
-                </h2>
-            </div>
-        </div>
+        <div id="foods"></div>
 
         <!-- Discount -->
         <div class="row my-4">
@@ -158,7 +58,7 @@
                         </h3>
                     </div>
                     <div class="col d-flex align-items-end justify-content-end">
-                        <span class="price-text green">12.89</span>
+                        <span class="price-text green">5.12</span>
                     </div>
                 </div>
                 <hr style="margin-top: 4px;" />
@@ -175,7 +75,7 @@
                         </h3>
                     </div>
                     <div class="col d-flex align-items-end justify-content-end">
-                        <span class="price-text">17.82</span>
+                        <span class="price-text"><span id="subTotal"></span></span>
                     </div>
                 </div>
                 <hr style="margin-top: 4px;" />
@@ -209,7 +109,7 @@
                         </h1>
                     </div>
                     <div class="col d-flex align-items-end justify-content-end">
-                        <span class="promo-text">$74.11</span>
+                        <span class="promo-text">$<span id="totalAmount"></span></span>
                     </div>
                 </div>
                 <hr style="border: 2px solid black; margin-top: 4px;" />
