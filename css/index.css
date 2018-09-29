@@ -1,6 +1,62 @@
+@font-face {
+    font-family: barlowSemiBold;
+    src: url('../font/Barlow-SemiBold.ttf')
+}
+
+@font-face {
+    font-family: barlowBold;
+    src: url('../font/Barlow-Bold.ttf')
+}
+
+@font-face {
+    font-family: barlowRegular;
+    src: url('../font/Barlow-Regular.ttf')
+}
+
+@font-face {
+    font-family: barlowMedium;
+    src: url('../font/Barlow-Medium.ttf')
+}
+
 .logo {
     margin-bottom: 13px;
     width: 600px;
     height: 67px;
     background: grey;
+}
+
+.emphasis-text {
+    font-family: barlowSemiBold;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.discount-text {
+    font-family: barlowMedium;
+    font-size: 16px;
+}
+
+.price-text {
+    font-family: barlowBold;
+    font-size: 28px;
+}
+
+.promo-text {
+    font-family: barlowSemiBold;
+    font-size: 48px;
+}
+
+h1 {
+    font-family: barlowRegular !important;
+    font-size: 38px !important;
+}
+
+h2 {
+    font-family: barlowBold !important;
+    font-size: 22px !important;
+}
+
+body {
+    font-family: barlowMedium !important;
+    font-size: 16px !important;
 }
