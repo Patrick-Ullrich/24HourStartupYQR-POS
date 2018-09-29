@@ -5,10 +5,11 @@
 }
 
 .drink-price-container {
-  margin-top: 50px;
+  margin-top: 57px;
   padding-bottom: 5px;
   border-radius: 10px;
   color: #5ADE7D;
+  line-height: 1;
 }
 
 .drink-card-body {
@@ -16,18 +17,22 @@
 }
 
 .drink-price {
-  font-size: 24pt;
+  font-size: 47px;
+  font-family: barlowSemiBold;
 }
 
 .featured-drink {
-  font-size: 24pt;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+
 }
 
 .drink-title {
-  font-size: 30pt;
+  font-size: 47px;
 }
 
 .drink-card-titles {
-  margin-top: 40px;
+  margin-top: 60px;
   color: white;
 }
