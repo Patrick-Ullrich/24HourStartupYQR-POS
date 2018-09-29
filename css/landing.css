@@ -4,11 +4,26 @@
     width: 552px;
     height: 170px;
     float: left;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/shoes.jpg);
     background-size: cover;
     position: relative;
-  }
-  
+}
+
+.food-hero {
+    background: url("../img/food-hero.jpg");
+}
+
+.drinks-hero {
+    background: url("../img/drinks-hero.jpg");
+}
+
+.bills-hero {
+    background: url("../img/bills-hero.jpg");
+}
+
+.service-hero {
+    background: url("../img/service-hero.jpg");
+}
+
 .landing-card__text {
     position: absolute;
     bottom: 10px;
@@ -16,4 +31,4 @@
     padding: 4px 8px;
     color: white;
     margin: 0;
-  }
+}
