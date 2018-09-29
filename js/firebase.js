@@ -33,34 +33,34 @@ function del () {
 
 const userSeed = [
   {
-    id: 1,
+    id: 0,
     name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
+  },
+  {
+    id: 1,
+    name: 'Alison Lea',
+    featured: 4
   },
   {
     id: 2,
-    name: 'Jamie Jamieson',
-    preference: 4
+    name: 'Dustin Coupal',
+    featured: 4
   },
   {
     id: 3,
-    name: 'Jamie Jamieson',
-    preference: 4
+    name: 'Eric Dillon',
+    featured: 4
   },
   {
     id: 4,
     name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
   },
   {
     id: 5,
     name: 'Jamie Jamieson',
-    preference: 4
-  },
-  {
-    id: 6,
-    name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
   }
 ]
 
@@ -113,8 +113,58 @@ const foodSeed = [
   }
 ]
 
+const drinkSeed = [
+  {
+    'id': 1,
+    'title': 'Burt Reynolds',
+    'description': 'Fizzy but fun.',
+    'price': '4.99',
+    'discount': 10
+  },
+  {
+    'id': 2,
+    'title': 'White Russian',
+    'description': 'Fizzy but fun.',
+    'price': '3.99',
+    'discount': 0
+  },
+  {
+    'id': 3,
+    'title': 'Caesar',
+    'description': 'Fizzy but fun.',
+    'price': '7.00',
+    'discount': 20
+  },
+  {
+    'id': 4,
+    'title': 'Pepsi',
+    'description': 'Fizzy but fun.',
+    'price': '1.99',
+    'discount': 20
+  },
+  {
+    'id': 5,
+    'title': 'Ginger Ale',
+    'description': 'Fizzy but fun.',
+    'price': '1.99',
+    'discount': 0
+  },
+  {
+    'id': 6,
+    'title': 'Fanta',
+    'description': 'Fizzy but fun.',
+    'price': '2.29',
+    'discount': 0
+  }
+]
+
 function seedFood () {
   firebase.database().ref('food').set([...foodSeed])
 }
+
+function seedDrinks() {
+  firebase.database().ref('drinks').set([...drinkSeed])
+}
 // seedUsers()
 // seedFood()
+// seedDrinks()

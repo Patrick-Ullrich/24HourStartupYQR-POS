@@ -1,11 +1,11 @@
 .drink-card-container {
   border-radius: 10px;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/shoes.jpg);
+  background: url('../img/Drink - Featured Drink.png');
   background-size: cover;
 }
 
 .drink-price-container {
-  margin-top: 57px;
+  margin-top: 70px;
   padding-bottom: 5px;
   border-radius: 10px;
   color: #5ADE7D;
@@ -17,7 +17,7 @@
 }
 
 .drink-price {
-  font-size: 47px;
+  font-size: 36px;
   font-family: barlowSemiBold;
 }
 
@@ -35,4 +35,15 @@
 .drink-card-titles {
   margin-top: 60px;
   color: white;
+}
+
+.featured-collapse-bottom {
+    margin-left: -1px;
+    width: 540px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+    margin-bottom: -2px;
+    border-bottom: 1px;
+    border: grey solid 1px;
 }
