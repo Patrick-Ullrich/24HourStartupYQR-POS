@@ -72,6 +72,7 @@ router.on({
   'service': () => {
     loadHTML('service.html', 'view').then(() => {
       bindNavigation()
+      initService()
     })
   },
   'foodDetail': () => {
