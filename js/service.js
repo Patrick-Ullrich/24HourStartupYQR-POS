@@ -1,12 +1,20 @@
-var modal = document.getElementById('waterModal');
+var modal = {}
+// $(document).ready(() => {
+//   document.getElementById('water').addEventListener('click', waterFunction)
+//   modal = document.getElementById('waterModal')
+// })
 
-document.getElementById("water").addEventListener('click', waterFunction);
+setTimeout(() => {
+  document.getElementById('water').addEventListener('click', waterFunction)
+  modal = document.getElementById('waterModal')
+}, 500)
 
-var span = document.getElementsByClassName("close")[0];
+//
 
-function waterFunction()
-{
-    modal.style.display = "block";
+var span = document.getElementsByClassName('close')[0]
+
+function waterFunction () {
+  modal.style.display = 'block'
 }
 
 // wBtn.onclick = function() {
