@@ -1,31 +1,22 @@
 <div id="animation-wrapper" class="animated fadeIn">
-        <div class="logo">
-                <a href="/" data-route>
-                    <button class="btn btn-lg btn-success mt-2 ml-2">Back</button>
-                </a>
-            </div>
-
-            <!--
-                <h4 class="data-title">Product Title</h4>
-                <h5 class="data-description">Product Description</h5>
-                </div>
-                <div class="float-right text-right">
-                    <h4 class="data-price font-weight-bold">6.79</h4>
-                    <h5 class="data-discount" style="color:#5ADE7D">20% off</h5>
-            -->
+    <div class="logo">
+        <a href="/" data-route>
+            <button class="btn btn-lg btn-success mt-2 ml-2">Back</button>
+        </a>
+    </div>
     <div class="container">
         <div class="my-4"></div>
         <div class="row">
             <div class="col-12">
                 <div class="card drink-card-container">
                     <div class="card-body drink-card-body" style="padding-left:15px; padding-right: 15px;" onclick="collapseFeatured()" onmousedown="collapseFeatured()" data-toggle="collapse" data-target="#featuredCollapse">
-                        <div class="float-left drink-card-titles">
+                        <div class="float-left drink-card-titles col-9" style="padding-left: 0">
                             <h5 class="featured-drink small">Featured Item</h5>
                             <h4 class="drink-title font-weight-bold featured-title" id="featured-title">Bahama Mamas</h4>
                         </div>
                         <div class="card col-3 float-right drink-price-container text-center">
                             <div class="drink-price" id="featured-price">6.49</div>
-                            <div class="subtitle data-discount">20% off</div>
+                            <div class="subtitle">20% off</div>
                         </div>
                     </div>
 
@@ -42,7 +33,7 @@
                                                 fill="#707070" />
                                         </svg>
                                     </span> 
-                                    <span id="featuredAmount">00</span> 
+                                    <span id="featuredAmount">01</span> 
                                     <span onclick="incrementFeatured()">
                                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                             viewBox="0 0 491.86 491.86" style="enable-background:new 0 0 491.86 491.86;" xml:space="preserve" width="40px" height="20px">
@@ -77,7 +68,7 @@
                 </div>
                 <div class="float-right text-right">
                     <h4 class="font-weight-bold data-price">6.79</h4>
-                    <h5 style="color:#5ADE7D">20% off</h5>
+                    <h5 style="color:#5ADE7D" class="data-discount">20% off</h5>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -106,7 +97,7 @@
                             </span></h4>
                     </div>
                 
-                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(0)">ORDER</button></div>
+                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(0, 'food')">ORDER</button></div>
                     <div class="clearfix"></div>
                 </div>
                 <hr />
@@ -121,7 +112,7 @@
                 </div>
                 <div class="float-right text-right">
                     <h4 class="font-weight-bold data-price">6.79</h4>
-                    <h5 style="color:#5ADE7D">20% off</h5>
+                    <h5 style="color:#5ADE7D" class="data-discount">20% off</h5>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -150,9 +141,17 @@
                             </span></h4>
                     </div>
         
-                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(1)">ORDER</button></div>
+                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(1, 'food')">ORDER</button></div>
                     <div class="clearfix"></div>
                 </div>
+                <hr />
+            </div>
+        </div>
+
+        <div class="my-4"></div>
+        <div class="row">
+            <div class="col-12">
+                <h3>Entrees</h3>
                 <hr />
             </div>
         </div>
@@ -165,7 +164,7 @@
                 </div>
                 <div class="float-right text-right">
                     <h4 class="font-weight-bold data-price">6.79</h4>
-                    <h5 style="color:#5ADE7D">20% off</h5>
+                    <h5 style="color:#5ADE7D" class="data-discount">20% off</h5>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -194,20 +193,13 @@
                             </span></h4>
                     </div>
         
-                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(2)">ORDER</button></div>
+                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(2, 'food')">ORDER</button></div>
                     <div class="clearfix"></div>
                 </div>
                 <hr />
             </div>
         </div>
 
-        <div class="my-4"></div>
-        <div class="row">
-            <div class="col-12">
-                <h3>Entrees</h3>
-                <hr />
-            </div>
-        </div>
         <div class="row">
             <div class="col-12 ripple list-ripple" onclick="collapseFood(3)">
                 <div class="float-left">
@@ -216,7 +208,7 @@
                 </div>
                 <div class="float-right text-right">
                     <h4 class="font-weight-bold data-price">6.79</h4>
-                    <h5 style="color:#5ADE7D">20% off</h5>
+                    <h5 style="color:#5ADE7D" class="data-discount">20% off</h5>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -245,7 +237,7 @@
                             </span></h4>
                     </div>
         
-                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(3)">ORDER</button></div>
+                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(3, 'food')">ORDER</button></div>
                     <div class="clearfix"></div>
                 </div>
                 <hr />
@@ -260,7 +252,7 @@
                 </div>
                 <div class="float-right text-right">
                     <h4 class="font-weight-bold data-price">6.79</h4>
-                    <h5 style="color:#5ADE7D">20% off</h5>
+                    <h5 style="color:#5ADE7D" class="data-discount">20% off</h5>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -289,7 +281,7 @@
                             </span></h4>
                     </div>
         
-                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(4)">ORDER</button></div>
+                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(4, 'food')">ORDER</button></div>
                     <div class="clearfix"></div>
                 </div>
                 <hr />
@@ -304,7 +296,7 @@
                 </div>
                 <div class="float-right text-right">
                     <h4 class="font-weight-bold data-price">6.79</h4>
-                    <h5 style="color:#5ADE7D">20% off</h5>
+                    <h5 style="color:#5ADE7D" class="data-discount">20% off</h5>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -333,7 +325,7 @@
                             </span></h4>
                     </div>
         
-                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(5)">ORDER</button></div>
+                    <div class="float-right"><button id="startConfetti" class="btn btn-outline-success" onclick="order(5, 'food')">ORDER</button></div>
                     <div class="clearfix"></div>
                 </div>
                 <hr />

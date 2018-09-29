@@ -74,6 +74,7 @@ const foodSeed = [
     'name': 'Spinach Dip',
     'price': '9.99',
     'description': 'Break me off a piece of that spi-nach dip.',
+    'discount': 0,
     'category': ['vegeterian', 'appetizer']
   },
   {
@@ -81,6 +82,7 @@ const foodSeed = [
     'name': 'Chicken Wings',
     'price': '8.99',
     'description': 'Hot ones is a good show.',
+    'discount': 0,
     'category': ['chicken', 'appetizer']
   },
   {
@@ -88,6 +90,7 @@ const foodSeed = [
     'name': 'Garden Salad',
     'price': '12.99',
     'description': 'The most bland thing you can get.',
+    'discount': 0,
     'category': ['vegeterian', 'appetizer']
   },
   {
@@ -95,6 +98,7 @@ const foodSeed = [
     'name': 'Steak & Frites',
     'price': '23.99',
     'description': 'Top sirloin steak paired with cut potatoes.',
+    'discount': 0,
     'category': ['meat', 'entree']
   },
   {
@@ -102,6 +106,7 @@ const foodSeed = [
     'name': 'Linguine Chicken Ametriciana',
     'price': '18.99',
     'description': 'This is italy.',
+    'discount': 0,
     'category': ['chicken', 'entree']
   },
   {
@@ -109,6 +114,7 @@ const foodSeed = [
     'name': 'Chicken Caesar Salad',
     'price': '14.99',
     'description': 'A classic.',
+    'discount': 0,
     'category': ['glutten', 'vegetarian']
   }
 ]
@@ -116,42 +122,42 @@ const foodSeed = [
 const drinkSeed = [
   {
     'id': 0,
-    'title': 'Burt Reynolds',
+    'name': 'Burt Reynolds',
     'description': 'Fizzy but fun.',
     'price': '4.99',
     'discount': 10
   },
   {
     'id': 1,
-    'title': 'White Russian',
+    'name': 'White Russian',
     'description': 'Fizzy but fun.',
     'price': '3.99',
     'discount': 0
   },
   {
     'id': 2,
-    'title': 'Caesar',
+    'name': 'Caesar',
     'description': 'Fizzy but fun.',
     'price': '7.00',
     'discount': 20
   },
   {
     'id': 3,
-    'title': 'Pepsi',
+    'name': 'Pepsi',
     'description': 'Fizzy but fun.',
     'price': '1.99',
     'discount': 20
   },
   {
     'id': 4,
-    'title': 'Ginger Ale',
+    'name': 'Ginger Ale',
     'description': 'Fizzy but fun.',
     'price': '1.99',
     'discount': 0
   },
   {
     'id': 5,
-    'title': 'Fanta',
+    'name': 'Fanta',
     'description': 'Fizzy but fun.',
     'price': '2.29',
     'discount': 0
