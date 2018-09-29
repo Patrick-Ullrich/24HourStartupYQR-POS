@@ -56,6 +56,26 @@ router.on({
     loadHTML('drinks.html', 'view').then(() => {
       bindNavigation()
     })
+  },
+  'bill': () => {
+    loadHTML('bill.html', 'view').then(() => {
+      bindNavigation()
+    })
+  },
+  'food': () => {
+    loadHTML('food.html', 'view').then(() => {
+      bindNavigation()
+    })
+  },
+  'service': () => {
+    loadHTML('service.html', 'view').then(() => {
+      bindNavigation()
+    })
+  },
+  'foodDetail': () => {
+    loadHTML('foodDetail.html', 'view').then(() => {
+      bindNavigation()
+    })
   }
 });
 
