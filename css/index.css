@@ -62,7 +62,7 @@ body {
 }
 
 
-.ripple-effect {
+.list-ripple .ripple-effect {
     top: -17px !important;
     margin-bottom: 16px;
     margin-right: -50px;

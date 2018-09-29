@@ -1,51 +1,51 @@
-function $id(id) {
-  return document.getElementById(id);
+function $id (id) {
+  return document.getElementById(id)
 }
 
-function loadHTML(url, id) {
+function loadHTML (url, id) {
   return new Promise((resolve, reject) => {
-    req = new XMLHttpRequest();
-    req.open('GET', `./templates/${url}`);
-    req.send();
+    req = new XMLHttpRequest()
+    req.open('GET', `./templates/${url}`)
+    req.send()
     req.onload = () => {
-      $id(id).innerHTML = req.responseText;
-      resolve();
-    };
+      $id(id).innerHTML = req.responseText
+      resolve()
+    }
   })
 }
 
-function bindNavigation() {
-  const navigationLinks = document.querySelectorAll('[data-route]');
+function bindNavigation () {
+  const navigationLinks = document.querySelectorAll('[data-route]')
   // Main Nav
   for (let nav of navigationLinks) {
     nav.addEventListener('click', function (e) {
       e.preventDefault()
       const element = $id('animation-wrapper')
       element.classList.remove('fadeIn')
-      element.classList.add('fadeOut')
+      // element.classList.add('fadeOut')
       setTimeout(() => {
         window.location.hash = `!${nav.getAttribute('href')}`
-      }, 500);
+      }, 200)
     })
   }
 
-  const subNavigationLinks = document.querySelectorAll('[data-sub-route]');
+  const subNavigationLinks = document.querySelectorAll('[data-sub-route]')
   for (let nav of subNavigationLinks) {
     nav.addEventListener('click', function (e) {
       e.preventDefault()
-      const elements = document.getElementsByClassName('animated sub');
+      const elements = document.getElementsByClassName('animated sub')
       for (let element of elements) {
         element.classList.remove('fadeIn')
-        element.classList.add('fadeOut')
+        // element.classList.add('fadeOut')
       }
       setTimeout(() => {
         window.location.hash = `!${nav.getAttribute('href')}`
-      }, 500);
+      }, 200)
     })
   }
 }
 
-router = new Navigo(null, true, '#!');
+router = new Navigo(null, true, '#!')
 router.on({
   'landing': () => {
     loadHTML('landing.html', 'view').then(() => {
@@ -77,16 +77,16 @@ router.on({
       bindNavigation()
     })
   }
-});
+})
 
 // set the default route
 router.on(() => {
   loadHTML('landing.html', 'view').then(() => {
     bindNavigation()
-  });
-});
+  })
+})
 
 // set the 404 route
-router.notFound((query) => { $id('view').innerHTML = '<h3>Couldn\'t find the page you\'re looking for...</h3>'; });
+router.notFound((query) => { $id('view').innerHTML = '<h3>Couldn\'t find the page you\'re looking for...</h3>' })
 
-router.resolve();
+router.resolve()
