@@ -83,6 +83,16 @@ router.on({
     loadHTML('transferBill.html', 'view').then(() => {
       bindNavigation()
     })
+  },
+  'payment': () => {
+    loadHTML('payment.html', 'view').then(() => {
+      bindNavigation()
+    })
+  },
+  'confirm': () => {
+    loadHTML('confirm.html', 'view').then(() => {
+      bindNavigation()
+    })
   }
 })
 
