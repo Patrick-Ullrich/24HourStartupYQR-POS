@@ -1,4 +1,4 @@
-const userId = 5
+const userId = 0
 let user = {}
 let featFood = {}
 
