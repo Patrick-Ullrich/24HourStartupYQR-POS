@@ -33,34 +33,34 @@ function del () {
 
 const userSeed = [
   {
-    id: 1,
+    id: 0,
     name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
+  },
+  {
+    id: 1,
+    name: 'Alison Lea',
+    featured: 4
   },
   {
     id: 2,
-    name: 'Jamie Jamieson',
-    preference: 4
+    name: 'Dustin Coupal',
+    featured: 4
   },
   {
     id: 3,
-    name: 'Jamie Jamieson',
-    preference: 4
+    name: 'Eric Dillon',
+    featured: 4
   },
   {
     id: 4,
     name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
   },
   {
     id: 5,
     name: 'Jamie Jamieson',
-    preference: 4
-  },
-  {
-    id: 6,
-    name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
   }
 ]
 
