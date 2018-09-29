@@ -1,8 +1,8 @@
-function $id (id) {
+function $id(id) {
   return document.getElementById(id)
 }
 
-function loadHTML (url, id) {
+function loadHTML(url, id) {
   return new Promise((resolve, reject) => {
     req = new XMLHttpRequest()
     req.open('GET', `./templates/${url}`)
@@ -14,7 +14,7 @@ function loadHTML (url, id) {
   })
 }
 
-function bindNavigation () {
+function bindNavigation() {
   const navigationLinks = document.querySelectorAll('[data-route]')
   // Main Nav
   for (let nav of navigationLinks) {
@@ -48,33 +48,54 @@ function bindNavigation () {
 function setDrinks() {
   const drinks = [
     {
-        "id": 1,
-        "title": "Pepsi",
-        "description": "Fizzy but fun.",
-        "price": "1.99",
-        "discount": 20
+      "id": 1,
+      "title": "Burt Reynolds",
+      "description": "Fizzy but fun.",
+      "price": "4.99",
+      "discount": 10
     },
     {
-        "id": 2,
-        "title": "Ginger Ale",
-        "description": "Fizzy but fun.",
-        "price": "1.99",
-        "discount": 0
+      "id": 2,
+      "title": "White Russian",
+      "description": "Fizzy but fun.",
+      "price": "3.99",
+      "discount": 0
     },
     {
-        "id": 3,
-        "title": "Fanta",
-        "description": "Fizzy but fun.",
-        "price": "2.29",
-        "discount": 0
+      "id": 3,
+      "title": "Caesar",
+      "description": "Fizzy but fun.",
+      "price": "7.00",
+      "discount": 20
+    },
+    {
+      "id": 4,
+      "title": "Pepsi",
+      "description": "Fizzy but fun.",
+      "price": "1.99",
+      "discount": 20
+    },
+    {
+      "id": 5,
+      "title": "Ginger Ale",
+      "description": "Fizzy but fun.",
+      "price": "1.99",
+      "discount": 0
+    },
+    {
+      "id": 6,
+      "title": "Fanta",
+      "description": "Fizzy but fun.",
+      "price": "2.29",
+      "discount": 0
 
     }
-]
+  ]
   const dataTitles = document.getElementsByClassName('data-title')
   const dataDescriptions = document.getElementsByClassName('data-description')
   const dataPrice = document.getElementsByClassName('data-price')
   const dataDiscount = document.getElementsByClassName('data-discount')
-  for(let i = 0; i < dataTitles.length; i++) {
+  for (let i = 0; i < dataTitles.length; i++) {
     dataTitles[i].innerHTML = drinks[i].title
     dataDescriptions[i].innerHTML = drinks[i].description
     dataPrice[i].innerHTML = drinks[i].price
