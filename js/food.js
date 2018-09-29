@@ -1,12 +1,15 @@
 const userId = 1
 
-let featuredAmount = 1
-let featuredAmountEle = {}
+var featuredAmount = 1
+var featuredAmountEle = {}
+var foodAmountEles = []
+var globalFoods = []
 
 function getFood () {
   firebase.database().ref('users').on('value', users => {
     const user = users.val().find(u => u.id === userId)
     firebase.database().ref('food').on('value', foods => {
+      globalFoods = foods.val()
       const featuredTitle = document.getElementById('featured-title')
       const featuredPrice = document.getElementById('featured-price')
       const featuredDescription = document.getElementById('featured-description')
@@ -23,6 +26,11 @@ function getFood () {
         dataDescriptions[i].foods = foods.val()[i].description
         dataPrices[i].innerHTML = foods.val()[i].price
       }
+      featuredAmountEle = document.getElementById('featuredAmount')
+
+      for (var i = 0; i < 6; i++) {
+        foodAmountEles[i] = document.getElementById('foodAmount' + i)
+      }
     })
   })
 
@@ -35,7 +43,7 @@ function getFood () {
   // }, 4000)
 }
 
-function collapseFeatured (e) {
+function collapseFeatured () {
   featuredAmount = 1
   featuredAmountEle.innerHTML = '0' + featuredAmount
   $('#featuredCollapse').collapse('toggle')
@@ -55,12 +63,51 @@ function incrementFeatured () {
   }
 }
 
+var foodAmount = 1
+function incrementFood (id) {
+  if (foodAmount < 9) {
+    foodAmount++
+    foodAmountEles[id].innerHTML = '0' + foodAmount
+  }
+}
+
+function decrementFood (id) {
+  if (foodAmount > 1) {
+    foodAmount--
+    foodAmountEles[id].innerHTML = '0' + foodAmount
+  }
+}
+
+function collapseFood (id) {
+  foodAmount = 1
+  for (var i = 0; i < 6; i++) {
+    $('#collapse' + i).collapse('hide')
+    foodAmountEles[i].innerHTML = '01'
+  }
+  $('#collapse' + id).collapse('show')
+}
+
+function order (id) {
+  // TODO: firebase call
+  const food = globalFoods.find(f => {
+    return f.id === id
+  })
+  firebase.database().ref('orders/' + Date.now()).set({
+    foodId: id,
+    name: food.name,
+    price: food.price,
+    amount: foodAmount,
+    userId: userId,
+    type: 'food'
+  })
+  setTimeout(() => $('#collapse' + id).collapse('hide'), 500)
+}
+
 function orderFeatured () {
   setTimeout(() => $('#featuredCollapse').collapse('hide'), 500)
 }
 
 $(function () {
-  featuredAmountEle = document.getElementById('featuredAmount')
   $('.btn').confettiButton({
     hoverOnly: true
   })
