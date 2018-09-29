@@ -51,31 +51,35 @@ function setDrinks() {
         "id": 1,
         "title": "Pepsi",
         "description": "Fizzy but fun.",
-        "price": "1.99"
+        "price": "1.99",
+        "discount": 20
     },
     {
         "id": 2,
         "title": "Ginger Ale",
         "description": "Fizzy but fun.",
-        "price": "1.99"
+        "price": "1.99",
+        "discount": 0
     },
     {
         "id": 3,
         "title": "Fanta",
         "description": "Fizzy but fun.",
-        "price": "2.29"
+        "price": "2.29",
+        "discount": 0
+
     }
 ]
   const dataTitles = document.getElementsByClassName('data-title')
   const dataDescriptions = document.getElementsByClassName('data-description')
+  const dataPrice = document.getElementsByClassName('data-price')
+  const dataDiscount = document.getElementsByClassName('data-discount')
   for(let i = 0; i < dataTitles.length; i++) {
     dataTitles[i].innerHTML = drinks[i].title
     dataDescriptions[i].innerHTML = drinks[i].description
+    dataPrice[i].innerHTML = drinks[i].price
+    dataDiscount[i].innerHTML = drinks[i].discount ? `${drinks[i].discount}% off` : ``
   }
-}
-
-function setFood() {
-
 }
 
 router = new Navigo(null, true, '#!')
@@ -88,6 +92,7 @@ router.on({
   'drinks': () => {
     loadHTML('drinks.html', 'view').then(() => {
       bindNavigation()
+      setDrinks()
     })
   },
   'bill': () => {
@@ -98,7 +103,6 @@ router.on({
   'food': () => {
     loadHTML('food.html', 'view').then(() => {
       bindNavigation()
-      setData()
     })
   },
   'service': () => {
