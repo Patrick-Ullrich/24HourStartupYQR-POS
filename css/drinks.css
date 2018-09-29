@@ -1,11 +1,14 @@
 .drink-card-container {
   border-radius: 10px;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/shoes.jpg);
+  background-size: cover;
 }
 
 .drink-price-container {
   margin-top: 50px;
   padding-bottom: 5px;
   border-radius: 10px;
+  color: #5ADE7D;
 }
 
 .drink-card-body {
@@ -26,4 +29,5 @@
 
 .drink-card-titles {
   margin-top: 40px;
+  color: white;
 }
