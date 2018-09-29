@@ -13,24 +13,6 @@ firebase.initializeApp(config)
 // Get a reference to the database service
 var database = firebase.database()
 
-function submit (userId, name, email, imageUrl) {
-  orderId++
-  firebase.database().ref('users/' + orderId).set({
-    username: name,
-    email: email,
-    profile_picture: imageUrl
-  })
-}
-
-function del () {
-  firebase.database().ref('users/' + orderId).remove()
-}
-
-// var starCountRef = firebase.database().ref('users').on('value', function (snapshot) {
-//   console.log(snapshot.val())
-//   // updateStarCount(postElement, snapshot.val());
-// })
-
 const userSeed = [
   {
     id: 0,
