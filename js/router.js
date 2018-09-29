@@ -95,6 +95,7 @@ router.on({
   'bill': () => {
     loadHTML('bill.html', 'view').then(() => {
       bindNavigation()
+      getBill()
     })
   },
   'food': () => {
