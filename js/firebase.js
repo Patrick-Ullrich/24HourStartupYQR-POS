@@ -42,7 +42,7 @@ const userSeed = [
   {
     id: 5,
     name: 'Patrick Ullrich',
-    featured: 4
+    featured: 3
   }
 ]
 
