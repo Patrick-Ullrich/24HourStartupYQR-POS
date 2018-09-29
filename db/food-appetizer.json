@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Steak & Frites",
+        "price": "23.99",
+        "description": "Top sirloin steak paired with cut potatoes.",
+        "category": "meat"
+    },
+    {
+        "id": 2,
+        "name": "Chicken Parmesan",
+        "price": "18.99",
+        "description": "This is italy.",
+        "category": "chicken"
+    },
+    {
+        "id": 3,
+        "name": "Black Bean Burger and Fries",
+        "price": "17.99",
+        "description": "A delicious meat substitute.",
+        "category": ["glutten", "vegetarian"]
+    }
+]
