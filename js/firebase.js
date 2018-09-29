@@ -70,42 +70,42 @@ function seedUsers () {
 
 const foodSeed = [
   {
-    'id': 1,
+    'id': 0,
     'name': 'Spinach Dip',
     'price': '9.99',
     'description': 'Break me off a piece of that spi-nach dip.',
     'category': ['vegeterian', 'appetizer']
   },
   {
-    'id': 2,
+    'id': 1,
     'name': 'Chicken Wings',
     'price': '8.99',
     'description': 'Hot ones is a good show.',
     'category': ['chicken', 'appetizer']
   },
   {
-    'id': 3,
+    'id': 2,
     'name': 'Garden Salad',
     'price': '12.99',
     'description': 'The most bland thing you can get.',
-    'category': ['vegeterian','appetizer']
+    'category': ['vegeterian', 'appetizer']
   },
   {
-    'id': 4,
+    'id': 3,
     'name': 'Steak & Frites',
     'price': '23.99',
     'description': 'Top sirloin steak paired with cut potatoes.',
     'category': ['meat', 'entree']
   },
   {
-    'id': 5,
+    'id': 4,
     'name': 'Linguine Chicken Ametriciana',
     'price': '18.99',
     'description': 'This is italy.',
     'category': ['chicken', 'entree']
   },
   {
-    'id': 6,
+    'id': 5,
     'name': 'Chicken Caesar Salad',
     'price': '14.99',
     'description': 'A classic.',
@@ -115,42 +115,42 @@ const foodSeed = [
 
 const drinkSeed = [
   {
-    'id': 1,
+    'id': 0,
     'title': 'Burt Reynolds',
     'description': 'Fizzy but fun.',
     'price': '4.99',
     'discount': 10
   },
   {
-    'id': 2,
+    'id': 1,
     'title': 'White Russian',
     'description': 'Fizzy but fun.',
     'price': '3.99',
     'discount': 0
   },
   {
-    'id': 3,
+    'id': 2,
     'title': 'Caesar',
     'description': 'Fizzy but fun.',
     'price': '7.00',
     'discount': 20
   },
   {
-    'id': 4,
+    'id': 3,
     'title': 'Pepsi',
     'description': 'Fizzy but fun.',
     'price': '1.99',
     'discount': 20
   },
   {
-    'id': 5,
+    'id': 4,
     'title': 'Ginger Ale',
     'description': 'Fizzy but fun.',
     'price': '1.99',
     'discount': 0
   },
   {
-    'id': 6,
+    'id': 5,
     'title': 'Fanta',
     'description': 'Fizzy but fun.',
     'price': '2.29',
@@ -162,7 +162,7 @@ function seedFood () {
   firebase.database().ref('food').set([...foodSeed])
 }
 
-function seedDrinks() {
+function seedDrinks () {
   firebase.database().ref('drinks').set([...drinkSeed])
 }
 // seedUsers()
