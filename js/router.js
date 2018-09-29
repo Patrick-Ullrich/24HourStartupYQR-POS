@@ -15,6 +15,40 @@ function loadHTML (url, id) {
 }
 
 function bindNavigation () {
+
+  let imgPath = ''
+  let name = ''
+  switch(userId) {
+    case 0: // jamie
+      name = 'Jamie Jamieson'
+      imgPath = '../img/Jamie Jamieson Headshot.png'
+    break;
+    case 1: // alison
+      name = "Alison Lean"
+      imgPath = '../img/Allison Lea Headshot.png'
+    break;
+    case 2: // Dustin
+      name = "Dustin Coupal"
+      imgPath = '../img/Dustin Coupal Headshot.png'
+    break;
+    case 3: // Eric
+      name = "Eric Dillong"
+      imgPath = '../img/Eric Dillon Headshot.png'
+    break;
+    case 4: // Sam
+      name = "Sam Dietrich"
+      imgPath = '../img/Sam_headshot.png'
+    break;
+    case 5: 
+      name = 'Patrick Ullrich'
+      imgPath = '../img/Patrick_headshot.png'
+    break;
+  }
+
+  // Load header
+  $id('user-img').src = imgPath
+  $id('user-name').innerHTML = name
+
   const navigationLinks = document.querySelectorAll('[data-route]')
   // Main Nav
   for (let nav of navigationLinks) {
