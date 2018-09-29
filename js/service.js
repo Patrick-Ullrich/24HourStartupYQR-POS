@@ -1,4 +1,7 @@
 var serviceModal = {}
+let wmodal
+let wamodal
+let cmodal
 
 function initService () {
   setTimeout(() => {
@@ -11,29 +14,28 @@ function initService () {
   }, 200)
 }
 
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName('close')[0]
 
 function waterFunction () {
-    wmodal.style.display = 'block'
+  wmodal.style.display = 'block'
 }
 
 function waitressFunction () {
-    wamodal.style.display = 'block'
+  wamodal.style.display = 'block'
 }
 
 function cleanFunction () {
-    cmodal.style.display = 'block'
+  cmodal.style.display = 'block'
 }
 
-window.onclick = function(event) {
-    if (event.target == waterModal) {
-        waterModal.style.display = "none";
-    }
-    if (event.target == wamodal) {
-        wamodal.style.display = "none";
-    }
-    if (event.target == cmodal) {
-        cmodal.style.display = "none";
-    }
+window.onclick = function (event) {
+  if (event.target == wmodal) {
+    waterModal.style.display = 'none'
+  }
+  if (event.target == wamodal) {
+    wamodal.style.display = 'none'
+  }
+  if (event.target == cmodal) {
+    cmodal.style.display = 'none'
+  }
 }
-
