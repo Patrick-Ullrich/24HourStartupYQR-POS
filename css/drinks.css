@@ -1,0 +1,29 @@
+.drink-card-container {
+  border-radius: 10px;
+}
+
+.drink-price-container {
+  margin-top: 50px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+
+.drink-card-body {
+  padding: 0;
+}
+
+.drink-price {
+  font-size: 24pt;
+}
+
+.featured-drink {
+  font-size: 24pt;
+}
+
+.drink-title {
+  font-size: 30pt;
+}
+
+.drink-card-titles {
+  margin-top: 40px;
+}
