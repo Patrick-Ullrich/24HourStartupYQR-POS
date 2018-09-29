@@ -1,10 +1,14 @@
+let subTotal = 0
+let grandAmount = 0
+
 function getBill() {
   firebase.database().ref('users').on('value', users => {
     user = users.val().find(u => u.id === userId)
     firebase.database().ref('orders').on('value', orders => {
       let drinksList = []
       let foodsList = []
-      let subTotal = 0
+      subTotal = 0
+      grandAmount = 0
       for (let key in orders.val()) {
         let val = orders.val()[key]
 
@@ -68,10 +72,15 @@ function getBill() {
       }
       subTotal -= 5.12
       tip = 0.18 * subTotal
-      let grandAmount = subTotal + tip
+      grandAmount = subTotal + tip
 
       $("#totalAmount").text(grandAmount.toFixed(2))
       $("#subTotal").text(subTotal.toFixed(2))
     })
   })
+}
+
+function getPayment() {
+  $("#subTotal").text(subTotal.toFixed(2))
+  $("#totalAmount").text(grandAmount.toFixed(2))
 }
