@@ -63,8 +63,8 @@ body {
 
 
 .ripple-effect {
-    top: -16px !important;
+    top: -17px !important;
     margin-bottom: 16px;
-    margin-right: 12px;
-    margin-left: 12px;
+    margin-right: -50px;
+    margin-left: -50px;
 }
