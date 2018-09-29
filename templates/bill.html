@@ -1,7 +1,230 @@
 <div id="animation-wrapper" class="animated fadeIn">
-    <div class="container">
-        <header>
-            <div class="h2">Bill</div>
-        </header>
+    <div class="logo">
+        <a href="/" data-route>
+            <button class="btn btn-lg btn-success mt-2 ml-2">Back</button>
+        </a>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Your Bill</h1>
+                <hr />
+            </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="row">
+            <div class="col-6">
+                <h3>
+                    Drinks
+                </h3>
+            </div>
+            <div class="col-3 text-center">
+                <h3>
+                    Quantity
+                </h3>
+            </div>
+            <div class="col-3 text-right">
+                <h3>
+                    Price
+                </h3>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-6">
+                <h2>
+                    Pilsner
+                </h2>
+            </div>
+            <div class="col-3 text-center">
+                <h2>
+                    2
+                </h2>
+            </div>
+            <div class="col-3 text-right">
+                <h2>
+                    12.12
+                </h2>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-6">
+                <h2>
+                    Red Wine 6oz
+                </h2>
+            </div>
+            <div class="col-3 text-center">
+                <h2>
+                    1
+                </h2>
+            </div>
+            <div class="col-3 text-right">
+                <h2>
+                    14.28
+                </h2>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-6">
+                <h2>
+                    Good Spirit Kombucha
+                </h2>
+            </div>
+            <div class="col-3 text-center">
+                <h2>
+                    3
+                </h2>
+            </div>
+            <div class="col-3 text-right">
+                <h2>
+                    17.82
+                </h2>
+            </div>
+        </div>
+
+        <!-- Food -->
+        <div class="row mt-4">
+            <div class="col-6">
+                <h3>
+                    Food
+                </h3>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-6">
+                <h2>
+                    Hamburger and Fries
+                </h2>
+            </div>
+            <div class="col-3 text-center">
+                <h2>
+                    1
+                </h2>
+            </div>
+            <div class="col-3 text-right">
+                <h2>
+                    12.12
+                </h2>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-6">
+                <h2>
+                    Red Wine 6oz
+                </h2>
+            </div>
+            <div class="col-3 text-center">
+                <h2>
+                    1
+                </h2>
+            </div>
+            <div class="col-3 text-right">
+                <h2>
+                    14.28
+                </h2>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-6">
+                <h2>
+                    Good Spirit Kombucha
+                </h2>
+            </div>
+            <div class="col-3 text-center">
+                <h2>
+                    3
+                </h2>
+            </div>
+            <div class="col-3 text-right">
+                <h2>
+                    17.82
+                </h2>
+            </div>
+        </div>
+
+        <!-- Discount -->
+        <div class="row my-4">
+            <div class="col">
+                <div class="row">
+                    <div class="col d-flex align-items-end">
+                        <h3 style="margin: 0; font-size: 26px;">
+                            Discount
+                        </h3>
+                    </div>
+                    <div class="col d-flex align-items-end justify-content-end">
+                        <span class="price-text green">12.89</span>
+                    </div>
+                </div>
+                <hr style="margin-top: 4px;" />
+            </div>
+        </div>
+
+        <!-- Sub total -->
+        <div class="row my-4">
+            <div class="col">
+                <div class="row">
+                    <div class="col d-flex align-items-end">
+                        <h3 style="margin: 0; font-size: 26px;">
+                            Subtotal
+                        </h3>
+                    </div>
+                    <div class="col d-flex align-items-end justify-content-end">
+                        <span class="price-text">17.82</span>
+                    </div>
+                </div>
+                <hr style="margin-top: 4px;" />
+            </div>
+        </div>
+
+        <!-- Tip % -->
+        <div class="row my-4">
+            <div class="col">
+                <div class="row">
+                    <div class="col d-flex align-items-end">
+                        <h3 style="margin: 0; font-size: 26px;">
+                            Tip %
+                        </h3>
+                    </div>
+                    <div class="col d-flex align-items-end justify-content-end">
+                        <span class="price-text">18%</span>
+                    </div>
+                </div>
+                <hr style="margin-top: 4px;" />
+            </div>
+        </div>
+
+        <!-- Total Amount -->
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col d-flex align-items-end">
+                        <h1 style="margin: 0;">
+                            Total Amount
+                        </h1>
+                    </div>
+                    <div class="col d-flex align-items-end justify-content-end">
+                        <span class="promo-text">$74.11</span>
+                    </div>
+                </div>
+                <hr style="border: 2px solid black; margin-top: 4px;" />
+            </div>
+        </div>
+
+        <!-- Share / Bill -->
+        <div class="row mt-4">
+            <div class="col">
+                <button class="btn btn-block btn-outline-dark">AIRDROP</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-block btn-outline-dark green green-border">PAY</button>
+            </div>
+        </div>
+
+    </div>
+
 </div>

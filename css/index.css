@@ -41,6 +41,14 @@
     font-size: 28px;
 }
 
+.green {
+    color: #5ADE7D;
+}
+
+.green-border {
+    border-color: #5ADE7D;
+}
+
 .promo-text {
     font-family: barlowSemiBold;
     font-size: 48px;
@@ -54,6 +62,11 @@ h1 {
 h2 {
     font-family: barlowBold !important;
     font-size: 22px !important;
+}
+
+h3 {
+    font-family: barlowRegular;
+    font-size: 24px;
 }
 
 body {
