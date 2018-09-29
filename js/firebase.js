@@ -33,34 +33,34 @@ function del () {
 
 const userSeed = [
   {
-    id: 1,
+    id: 0,
     name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
+  },
+  {
+    id: 1,
+    name: 'Alison Lea',
+    featured: 4
   },
   {
     id: 2,
-    name: 'Jamie Jamieson',
-    preference: 4
+    name: 'Dustin Coupal',
+    featured: 4
   },
   {
     id: 3,
-    name: 'Jamie Jamieson',
-    preference: 4
+    name: 'Eric Dillon',
+    featured: 4
   },
   {
     id: 4,
     name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
   },
   {
     id: 5,
     name: 'Jamie Jamieson',
-    preference: 4
-  },
-  {
-    id: 6,
-    name: 'Jamie Jamieson',
-    preference: 4
+    featured: 4
   }
 ]
 
@@ -85,10 +85,10 @@ const foodSeed = [
   },
   {
     'id': 3,
-    'name': 'Fettucine Linguine',
-    'price': '15.99',
-    'description': 'A copy pasta.',
-    'category': ['vegetarian', 'entree']
+    'name': 'Garden Salad',
+    'price': '12.99',
+    'description': 'The most bland thing you can get.',
+    'category': ['vegeterian','appetizer']
   },
   {
     'id': 4,
@@ -99,16 +99,16 @@ const foodSeed = [
   },
   {
     'id': 5,
-    'name': 'Chicken Parmesan',
+    'name': 'Linguine Chicken Ametriciana',
     'price': '18.99',
     'description': 'This is italy.',
     'category': ['chicken', 'entree']
   },
   {
     'id': 6,
-    'name': 'Black Bean Burger and Fries',
-    'price': '17.99',
-    'description': 'A delicious meat substitute.',
+    'name': 'Chicken Caesar Salad',
+    'price': '14.99',
+    'description': 'A classic.',
     'category': ['glutten', 'vegetarian']
   }
 ]
