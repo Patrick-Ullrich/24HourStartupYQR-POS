@@ -1,4 +1,6 @@
 const userId = 1
+let user = {}
+let featFood = {}
 
 var featuredAmount = 1
 var featuredAmountEle = {}
@@ -7,13 +9,13 @@ var globalFoods = []
 
 function getFood () {
   firebase.database().ref('users').on('value', users => {
-    const user = users.val().find(u => u.id === userId)
+    user = users.val().find(u => u.id === userId)
     firebase.database().ref('food').on('value', foods => {
       globalFoods = foods.val()
       const featuredTitle = document.getElementById('featured-title')
       const featuredPrice = document.getElementById('featured-price')
       const featuredDescription = document.getElementById('featured-description')
-      const featFood = foods.val().find(f => f.id === user.featured)
+      featFood = foods.val().find(f => f.id === user.featured)
       featuredTitle.innerHTML = featFood.name
       featuredPrice.innerHTML = featFood.price
       featuredDescription.innerHTML = featFood.description
@@ -21,10 +23,12 @@ function getFood () {
       const dataTitles = document.getElementsByClassName('data-title')
       const dataDescriptions = document.getElementsByClassName('data-description')
       const dataPrices = document.getElementsByClassName('data-price')
+      const dataDiscount = document.getElementsByClassName('data-discount')
       for (var i = 0; i < dataTitles.length; i++) {
         dataTitles[i].innerHTML = foods.val()[i].name
-        dataDescriptions[i].foods = foods.val()[i].description
+        dataDescriptions[i].innerHTML = foods.val()[i].description
         dataPrices[i].innerHTML = foods.val()[i].price
+        dataDiscount[i].innerHTML = foods.val()[i].discount ? `${foods.val()[i].discount}% off` : ``
       }
       featuredAmountEle = document.getElementById('featuredAmount')
 
@@ -33,14 +37,6 @@ function getFood () {
       }
     })
   })
-
-  // setTimeout(() => {
-  //   firebase.database().ref('users/1').set({
-  //     id: 1,
-  //     name: 'Alison Lea',
-  //     featured: 3
-  //   })
-  // }, 4000)
 }
 
 function collapseFeatured () {
@@ -87,23 +83,57 @@ function collapseFood (id) {
   $('#collapse' + id).collapse('show')
 }
 
-function order (id) {
-  // TODO: firebase call
-  const food = globalFoods.find(f => {
-    return f.id === id
-  })
-  firebase.database().ref('orders/' + Date.now()).set({
-    foodId: id,
-    name: food.name,
-    price: food.price,
-    amount: foodAmount,
-    userId: userId,
-    type: 'food'
-  })
-  setTimeout(() => $('#collapse' + id).collapse('hide'), 500)
+function order (id, type) {
+  if (type === 'food') {
+    const food = globalFoods.find(f => {
+      return f.id === id
+    })
+    firebase.database().ref('orders/' + Date.now()).set({
+      foodId: id,
+      name: food.name,
+      price: food.price,
+      amount: foodAmount,
+      userId: userId,
+      type: 'food'
+    })
+    setTimeout(() => $('#collapse' + id).collapse('hide'), 500)
+  } else {
+    const drink = globalDrinks.find(f => {
+      return f.id === id
+    })
+    firebase.database().ref('orders/' + Date.now()).set({
+      foodId: id,
+      name: drink.name,
+      price: drink.price,
+      amount: foodAmount,
+      userId: userId,
+      type: 'drink'
+    })
+    setTimeout(() => $('#collapse' + id).collapse('hide'), 500)
+  }
 }
 
 function orderFeatured () {
+  firebase.database().ref('orders/' + Date.now()).set({
+    foodId: user.featured,
+    name: featFood.name,
+    price: featFood.price,
+    amount: featuredAmount,
+    userId: user.id,
+    type: 'food'
+  })
+  setTimeout(() => $('#featuredCollapse').collapse('hide'), 500)
+}
+
+function orderFeaturedDrink () {
+  firebase.database().ref('orders/' + Date.now()).set({
+    foodId: 1,
+    name: 'White Russian',
+    price: 3.99,
+    amount: featuredAmount,
+    userId: userId,
+    type: 'drink'
+  })
   setTimeout(() => $('#featuredCollapse').collapse('hide'), 500)
 }
 
