@@ -45,6 +45,39 @@ function bindNavigation () {
   }
 }
 
+function setDrinks() {
+  const drinks = [
+    {
+        "id": 1,
+        "title": "Pepsi",
+        "description": "Fizzy but fun.",
+        "price": "1.99"
+    },
+    {
+        "id": 2,
+        "title": "Ginger Ale",
+        "description": "Fizzy but fun.",
+        "price": "1.99"
+    },
+    {
+        "id": 3,
+        "title": "Fanta",
+        "description": "Fizzy but fun.",
+        "price": "2.29"
+    }
+]
+  const dataTitles = document.getElementsByClassName('data-title')
+  const dataDescriptions = document.getElementsByClassName('data-description')
+  for(let i = 0; i < dataTitles.length; i++) {
+    dataTitles[i].innerHTML = drinks[i].title
+    dataDescriptions[i].innerHTML = drinks[i].description
+  }
+}
+
+function setFood() {
+
+}
+
 router = new Navigo(null, true, '#!')
 router.on({
   'landing': () => {
@@ -65,6 +98,7 @@ router.on({
   'food': () => {
     loadHTML('food.html', 'view').then(() => {
       bindNavigation()
+      setData()
     })
   },
   'service': () => {

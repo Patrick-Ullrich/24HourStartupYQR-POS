@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Pepsi",
+        "description": "Fizzy but fun.",
+        "price": "1.99"
+    },
+    {
+        "id": 2,
+        "name": "Ginger Ale",
+        "description": "Fizzy but fun.",
+        "price": "1.99"
+    },
+    {
+        "id": 3,
+        "name": "Fanta",
+        "description": "Fizzy but fun.",
+        "price": "2.29"
+    }
+]

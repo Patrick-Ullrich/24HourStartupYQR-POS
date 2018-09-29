@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Burt Reynolds",
+        "price": "4.99"
+    },
+    {
+        "id": 2,
+        "name": "White Russian",
+        "price": "3.99"
+    },
+    {
+        "id": 3,
+        "name": "Caesar",
+        "price": "7.00"
+    }
+]
