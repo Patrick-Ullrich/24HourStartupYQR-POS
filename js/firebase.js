@@ -167,3 +167,4 @@ function seedDrinks() {
 }
 // seedUsers()
 // seedFood()
+// seedDrinks()
