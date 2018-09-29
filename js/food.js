@@ -15,10 +15,12 @@ function getFood () {
       const featuredTitle = document.getElementById('featured-title')
       const featuredPrice = document.getElementById('featured-price')
       const featuredDescription = document.getElementById('featured-description')
+
       featFood = foods.val().find(f => f.id === user.featured)
       featuredTitle.innerHTML = featFood.name
       featuredPrice.innerHTML = featFood.price
       featuredDescription.innerHTML = featFood.description
+      $('.drink-card-container').css('background-image', `url('../img/ff${featFood.id}.png')`)
 
       const dataTitles = document.getElementsByClassName('data-title')
       const dataDescriptions = document.getElementsByClassName('data-description')
