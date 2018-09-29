@@ -15,9 +15,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: absolute;
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    /*padding-top: 100px;*/ /* Location of the box */
+    padding-top: 50%;
     left: 0;
     top: 0;
     width: 80%;
