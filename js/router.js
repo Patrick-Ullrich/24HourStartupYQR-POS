@@ -78,6 +78,11 @@ router.on({
     loadHTML('foodDetail.html', 'view').then(() => {
       bindNavigation()
     })
+  },
+  'transferBill': () => {
+    loadHTML('transferBill.html', 'view').then(() => {
+      bindNavigation()
+    })
   }
 })
 
