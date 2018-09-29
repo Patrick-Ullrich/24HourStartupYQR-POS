@@ -1,13 +1,13 @@
-.clear-table-hero {
-    background: url("../img/service-hero.jpg");
+.clear-hero {
+    background: url("../img/Service - Clear.png");
 }
 
 .water-hero {
-    background: url("../img/service-hero.jpg");
+    background: url("../img/Service - Water.png");
 }
 
-.waiter-hero {
-    background: url("../img/service-hero.jpg");
+.waitstaff-hero {
+    background: url("../img/Service - Waitstaff.png");
 }
 
 body {font-family: Arial, Helvetica, sans-serif;}
